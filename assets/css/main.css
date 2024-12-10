@@ -1,0 +1,36 @@
+/**
+ * File: main.css
+ * Main stylesheet including variables and common styles
+ */
+
+ :root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --success-color: #198754;
+    --danger-color: #dc3545;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+    --border-color: #dee2e6;
+}
+
+body {
+    font-family: 'Vazirmatn', sans-serif;
+    background-color: var(--light-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.btn {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+}

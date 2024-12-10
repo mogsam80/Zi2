@@ -1,0 +1,88 @@
+/**
+* File: assets/css/components/modal.css
+* Styles for modal components and cropper functionality
+*/
+
+/* Modal Base */
+.modal-dialog {
+    max-width: 95vw;
+    margin: 1rem auto;
+ }
+ 
+ .modal-content {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+ }
+ 
+ /* Modal Header */
+ .modal-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    border-radius: 12px 12px 0 0;
+    padding: 1rem 1.5rem;
+ }
+ 
+ /* Modal Body */
+ .modal-body {
+    padding: 0;
+    background-color: #333;
+    position: relative;
+    height: calc(90vh - 130px);
+ }
+ 
+ .img-container {
+    height: 100%;
+    overflow: hidden;
+ }
+ 
+ /* Modal Footer */
+ .modal-footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+    border-radius: 0 0 12px 12px;
+    padding: 1rem 1.5rem;
+ }
+ 
+ /* Crop Controls */
+ .crop-controls {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    gap: 10px;
+    backdrop-filter: blur(5px);
+ }
+ 
+ .crop-controls button {
+    min-width: 100px;
+ }
+ 
+ /* Responsive Adjustments */
+ @media (max-width: 768px) {
+    .modal-dialog {
+        margin: 0.5rem;
+    }
+    
+    .crop-controls {
+        width: 90%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+ }
+ 
+ /* Animation */
+ .modal.fade .modal-dialog {
+    transform: scale(0.95);
+    transition: transform 0.2s ease-out;
+ }
+ 
+ .modal.show .modal-dialog {
+    transform: scale(1);
+ }

@@ -1,0 +1,43 @@
+.
+├── api
+│   └── v1
+│       └── upload.php
+├── assets
+│   ├── css
+│   │   ├── components
+│   │   │   ├── cropper.css
+│   │   │   ├── modal.css
+│   │   │   └── upload.css
+│   │   ├── main.css
+│   │   └── style.css
+│   ├── img
+│   │   └── logo.svg
+│   └── js
+│       ├── Fingerprint.js
+│       ├── components
+│       │   ├── cropper.js
+│       │   ├── modal.js
+│       │   └── upload.js
+│       ├── main.js
+│       ├── userInfo.js
+│       └── utils
+│           ├── file.js
+│           └── validation.js
+├── debug.php
+├── includes
+│   ├── components
+│   │   ├── cropper-modal.php
+│   │   ├── footer.php
+│   │   ├── header.php
+│   │   └── upload-form.php
+│   ├── config.php
+│   ├── db.php
+│   └── functions.php
+├── index.php
+├── structure.txt
+├── upld
+│   ├── img
+│   └── original
+└── view.php
+
+15 directories, 26 files

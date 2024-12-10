@@ -1,0 +1,148 @@
+/**
+* File: assets/css/components/upload.css
+* Styles for upload component and functionality
+*/
+
+/* Upload Area */
+.upload-area {
+   border: 2px dashed #dee2e6;
+   border-radius: 12px;
+   padding: 2.5rem 2rem;
+   text-align: center;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   background-color: #ffffff;
+   position: relative;
+   overflow: hidden;
+}
+
+.upload-area:hover {
+   border-color: var(--primary-color);
+   background-color: rgba(13, 110, 253, 0.02);
+}
+
+.upload-area.drag-over {
+   border-color: var(--primary-color);
+   background-color: rgba(13, 110, 253, 0.05);
+}
+
+/* Upload Icon */
+.upload-icon {
+   margin-bottom: 1.5rem;
+   color: #6c757d;
+}
+
+.upload-icon svg {
+   width: 64px;
+   height: 64px;
+   stroke: currentColor;
+}
+
+/* Preview Container */
+.preview-container {
+   margin-top: 1rem;
+   animation: fadeIn 0.3s ease;
+}
+
+.preview-wrapper {
+   position: relative;
+   max-width: 100%;
+   margin: 0 auto;
+   border-radius: 8px;
+   overflow: hidden;
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.preview-image {
+   max-width: 100%;
+   max-height: 500px;
+   display: block;
+   margin: 0 auto;
+}
+
+/* حذف display: none از اینجا چون از d-none استفاده می‌کنیم */
+.preview-overlay {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background: rgba(0, 0, 0, 0.5);
+   align-items: center;
+   justify-content: center;
+}
+
+
+ /* Controls */
+ .controls {
+    padding: 1rem 0;
+ }
+ 
+ .progress {
+    height: 0.5rem;
+    margin: 1rem 0;
+    border-radius: 0.25rem;
+    overflow: hidden;
+ }
+ 
+ .progress-bar {
+    transition: width 0.3s ease;
+    background-color: var(--primary-color);
+ }
+ 
+ /* Animations */
+ @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+ }
+ 
+ /* Responsive Adjustments */
+ @media (max-width: 768px) {
+    .upload-area {
+        padding: 2rem 1rem;
+    }
+    
+    .preview-image {
+        max-height: 300px;
+    }
+    
+    .upload-icon svg {
+        width: 48px;
+        height: 48px;
+    }
+ }
+
+
+ /* Upload Result */
+.upload-result {
+   animation: slideUp 0.3s ease;
+}
+
+.upload-result .card {
+   overflow: hidden;
+}
+
+.upload-result .form-control {
+   font-family: monospace;
+   font-size: 0.9rem;
+   background-color: #f8f9fa;
+}
+
+.upload-result img {
+   transition: transform 0.3s ease;
+}
+
+.upload-result img:hover {
+   transform: scale(1.02);
+}
+
+@keyframes slideUp {
+   from {
+       opacity: 0;
+       transform: translateY(20px);
+   }
+   to {
+       opacity: 1;
+       transform: translateY(0);
+   }
+}

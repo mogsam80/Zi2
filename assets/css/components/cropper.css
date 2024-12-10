@@ -1,0 +1,40 @@
+/* در فایل cropper.css */
+.modal-dialog.modal-lg {
+    max-width: 90vw;
+    width: 90vw;
+    height: 85vh;
+    margin: 20px auto;
+}
+
+.modal-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-body {
+    flex: 1;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    height: calc(85vh - 120px); /* کم کردن ارتفاع هدر و فوتر */
+}
+
+.img-container {
+    height: 100%;
+    max-height: calc(85vh - 180px); /* فضای بیشتر برای دکمه‌ها */
+    background-color: #333;
+}
+
+#cropImage {
+    max-width: 100%;
+    max-height: calc(85vh - 200px);
+}
+
+.modal-footer {
+    position: relative;
+    z-index: 1050; /* بالاتر از تصویر */
+    background: white;
+    padding: 1rem;
+    margin-top: auto;
+}
